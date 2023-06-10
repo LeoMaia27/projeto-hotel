@@ -70,16 +70,16 @@ body {
 
 .hero-banner-iconPlay img {
     display: none;
-    margin: 0 auto 1em auto;
 }
 
 .hero-banner-title {
     color: var(--primary-color);
+    margin: 1.5em 0;
 }
 
 .hero-banner-subtitle {
-    margin-top: 1.5rem;
     color: rgb(97 38 116 / .7);
+    line-height: 1.5;
 }
 
 .hero-banner-btn {
@@ -92,7 +92,7 @@ body {
     border-radius: 8px;
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: 45.5em) {
 
     .header-top {
         position: relative;
@@ -136,6 +136,7 @@ body {
 
     .hero-banner-iconPlay img {
         display: block;
+        margin: 0 auto 1em auto;
         width: 10rem;
         height: 10rem;
     }
@@ -143,5 +144,18 @@ body {
     .hero-banner-btn {
         padding: 1rem 2.5rem;
     }
+}
 
+@media screen and (min-width: 60em) {
+    .hero-banner {
+        background: linear-gradient(white, var(--primary-color), white);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top;
+        aspect-ratio: 1198 / 670;
+
+        max-height: 70vh;
+        display: flex;   
+        align-items: flex-end;
+    }
 }
