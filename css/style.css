@@ -10,7 +10,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Mobile*/
@@ -55,6 +55,8 @@ body {
     text-decoration: none;
     color: white;
     padding: 1.5rem 1.75rem;
+
+    transition: background-color ease-in-out .2s;
 }
 
 .header-list a:hover {
@@ -162,8 +164,15 @@ body {
     container-name: containerMainContent;
 }
 
+.mainContent-image {
+    /*fazendo com que a div que segura a imagem não cresça, não diminua e tenha largura de 30%*/
+    flex: 0 0 30%;
+}
+
 .mainContent-image img {
     width: 100%;
+    border-radius: 2%;
+    max-height: 312px;
 }
 
 .mainContent .row {
@@ -184,6 +193,50 @@ body {
     text-transform: uppercase;
 }
 
+.mainContent-text {
+    flex-grow: 1;
+}
+
+/*Footer*/
+.footer {
+    padding: 2rem 3rem 3rem 3rem;
+    background-color: #25303e;
+    color: #ccc;
+}
+
+.footerTitle {
+    font-size: 2rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.footerContact h4 {
+    font-size: 1.6rem;
+    color: aliceblue;
+}
+
+.footerContact-links {
+    display: flex;
+    gap: 2em;
+    margin: 1rem 0
+}
+
+.footerContact a {
+    font-size: 2.25rem;
+    color: white;
+
+    transition: color ease-in-out .2s;
+}
+
+.footerContact a:hover {
+    color: wheat;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 @media screen and (min-width: 45.5em) { /*Tablet*/
 
     .header-top {
@@ -202,15 +255,17 @@ body {
         right: 12px;
         top: 12px;
         background-color: transparent;
+
+        transition: background-color ease-in-out .2s;
     }
 
     .header-list a {
         color: var(--primary-color);
+        border-radius: 8px;
     }
 
     .header-list a:hover {
         background-color: rgb(97 38 116 / .1);
-        border-radius: 8px;
     }
 
     /*Banner*/
@@ -244,7 +299,6 @@ body {
     }
 
     /*Middle Content*/
-
     .middleContent {
         box-shadow: 0 0 0  transparent;
     }
@@ -252,6 +306,23 @@ body {
     .col-md-6 {
         width: calc(50% - 1em);
         /*definindo largura com % menos o valor do gap*/
+    }
+
+    /*Footer*/
+    .footerTitle {
+        font-size: 2.5rem;
+        text-align: center;
+        color: aliceblue;
+    }
+
+    .footerContact h4 {
+        font-size: 1.8rem;
+        color: aliceblue;
+    }
+
+    .footerContact a {
+        font-size: 2.55rem;
+        color: white;
     }
 }
 
